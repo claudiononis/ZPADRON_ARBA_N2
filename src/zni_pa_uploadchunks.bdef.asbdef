@@ -1,0 +1,29 @@
+managed implementation in class znbp_i_pa_uploadchunks unique;
+strict ( 2 );
+
+define behavior for ZNI_PA_UPLOADCHUNKS alias UploadChunk
+persistent table znfi_pa_upload
+lock master
+authorization master ( global )
+{
+  create;
+  update;
+  delete;
+
+  determination SetCreatedAt on modify { create; }
+
+  field ( numbering : managed, readonly ) Id;
+  field ( readonly ) CreatedAt;
+
+  mapping for znfi_pa_upload
+  {
+    Id          = id;
+    UploadId    = upload_id;
+    ChunkIndex  = chunk_index;
+    TotalChunks = total_chunks;
+    FileName    = file_name;
+    CompanyCode = company_code;
+    Content     = content;
+    CreatedAt   = created_at;
+  }
+}
