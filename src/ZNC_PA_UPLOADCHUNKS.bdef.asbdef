@@ -1,8 +1,0 @@
-projection;
-strict ( 2 );
-
-define behavior for ZNC_PA_UPLOADCHUNKS alias UploadChunk
-{
-  use create;
-  use delete;
-}
