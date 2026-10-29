@@ -1,0 +1,12 @@
+ARBA N2 - Clases, tablas, CDS y definiciones de comportamiento RAP
+
+Base: copia RENOMBRADA del ZIP ARBA, no export actual del sistema H5R.
+Objetos del ZIP: ABAP classes (incluidos test y clases proxy generadas), tablas transparentes, CDS DDL sources y Behavior Definitions.
+EXCLUIDOS: APIS (publicaciones C1), Service Consumption Model (SCM), servicios/bindings, IAM, comunicaciones, BSP/UI5, autorizaciones, catálogos y deployment.
+
+NO ES IMPORTAR Y LISTO. Verificar metadatos abapGit y que la instalación cree todas las dependencias.
+Especial: clases ZNSCM_ARBA_BP y ZNSCM_ARBA_BP_GEN se incluyen como fuente ABAP, pero el SCM no está serializado. Debe crearse/revincularse en ADT. Validar que el modelo final y ZNCL_PA_BP_API usan el mismo proxy y tipos.
+No publicar C1 sin necesidad. Revisar objetos y estado de API antes de activar.
+Las correcciones posteriores a la exportación (bgMC, excepciones) NO se presumen incluidas.
+Sugerencia: importar a paquete NUEVO ZPADRON_ARBA_N2 y orden NUEVA, verificar activación/ATC, luego completar configuración y pruebas funcionales.
+La tarea H5RK900267 original no se modifica con este ZIP.
